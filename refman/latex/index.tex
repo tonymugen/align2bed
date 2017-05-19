@@ -4,10 +4,12 @@ The sofware uses control files that list paths to each F\+A\+S\+TA file to be pr
 
 While {\itshape align2bed} is tailored for the {\itshape Drosophila} Genome Nexus data, there are three ways it can be extended to similar data sets from other species. Data can be arranged to mimic the {\itshape Drosophila} set by treating chromosomes in groups of five. Alignment length can vary indefinitely. Furthermore, I wrote the program using a class that has wider applicability. Taking the {\itshape align2bed} source code as an exmaple, and reading the provided interface documentation, someone with even very limited experience in C++ can write software that applies to different data sets and hardware configurations. Finally, anyone who would like to extend functionality even further is welcome to modify the class implementation to suit their needs.
 
-Neither {\itshape align2bed} itself nor the class used to implement it has any dependencies outside of the C++ S\+TL. Only a compiler capable of recognizing the C++11 standard is required. The implementation is multithreaded, with chromosome arms processed in parallel. Each thread allocates a 2\+Gb buffer to read the F\+A\+S\+TA files. The {\itshape align2bed} source can be easily modified to change the threading and memory allocation parameters (see included class documentation for details).
+Neither {\itshape align2bed} itself nor the class used to implement it has any dependencies outside of the C++ S\+TL. Only a compiler capable of recognizing the C++11 standard is required (I successfully compiled with L\+L\+VM and G\+CC). The implementation is multithreaded, with chromosome arms processed in parallel. Each thread allocates a 2\+Gb buffer to read the F\+A\+S\+TA files. The {\itshape align2bed} source can be easily modified to change the threading and memory allocation parameters (see included class documentation for details).
 
 To compile, make sure you are in the directory with the source code files and run \begin{DoxyVerb}g++ align2bed.cpp sequence.cpp -o align2bed -O3 -march=native -std=c++11
 \end{DoxyVerb}
 
 
-then copy the binary where you need it. Run by typing {\ttfamily ./align2bed} in the directory with the binary and the data, or move into an appropriate /bin folder for global access. 
+then copy the binary where you need it. Run by typing {\ttfamily ./align2bed} in the directory with the binary and the data, or move into an appropriate /bin folder for global access.
+
+The example data set includes control files for each autosome and 20 kb of alignments extracted from 284 {\itshape Drosophila} lines (283 {\itshape D. melanogaster} and a {\itshape D. simulans} outgroup). Each chromosome needs a separate control file, which simply lists the paths to F\+A\+S\+TA files (which can include directories), one file per line. The file containing the outgroup sequence should be marked with \char`\"{}r\+:\char`\"{}. 
