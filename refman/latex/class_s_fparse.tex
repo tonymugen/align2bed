@@ -1,0 +1,234 @@
+\hypertarget{class_s_fparse}{}\section{S\+Fparse Class Reference}
+\label{class_s_fparse}\index{S\+Fparse@{S\+Fparse}}
+
+
+Sequence file parsing class.  
+
+
+
+
+{\ttfamily \#include $<$sequence.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_fparse_a6199b21081670322a0b0d7bbfeceb9a9}\label{class_s_fparse_a6199b21081670322a0b0d7bbfeceb9a9}} 
+\hyperlink{class_s_fparse_a6199b21081670322a0b0d7bbfeceb9a9}{S\+Fparse} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_s_fparse_a63162a0c3d8c855602796198854eb36f}{S\+Fparse} (const vector$<$ string $>$ \&in\+Fl\+Nam, const vector$<$ string $>$ \&line\+Names, const string \&ref\+Fl\+Nam, const string \&out\+Fl\+Nam, const string \&chr\+Nam, const unsigned short \&chr\+Num, const string \&in\+Fl\+Type, const string \&out\+Fl\+Type, const unsigned long \&alloc=2000000000\+U\+L)
+\begin{DoxyCompactList}\small\item\em Constructor with vectors of names. \end{DoxyCompactList}\item 
+\hyperlink{class_s_fparse_aa66f34c1f0db7451a191461f3f303137}{S\+Fparse} (const string \&file\+List, const string \&out\+Fl\+Nam, const string \&chr\+Nam, const unsigned short \&chr\+Num, const string \&in\+Fl\+Type, const string \&out\+Fl\+Type, const unsigned long \&alloc=2000000000\+U\+L)
+\begin{DoxyCompactList}\small\item\em Constructor with file list and explicit types. \end{DoxyCompactList}\item 
+\hyperlink{class_s_fparse_a7adee31d2eaa489b64e25f690348ce99}{S\+Fparse} (const string \&file\+List, const string \&out\+Fl\+Nam, const unsigned long \&alloc=2000000000\+U\+L)
+\begin{DoxyCompactList}\small\item\em Constructor with file list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_fparse_a197d31f86dd544159fc8d8d79e36aaaf}\label{class_s_fparse_a197d31f86dd544159fc8d8d79e36aaaf}} 
+\hyperlink{class_s_fparse_a197d31f86dd544159fc8d8d79e36aaaf}{$\sim$\+S\+Fparse} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hyperlink{class_s_fparse_ae85a63a8883ec1c318cabdcb30398063}{S\+Fparse} (const \hyperlink{class_s_fparse}{S\+Fparse} \&in\+Obj)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_s_fparse}{S\+Fparse} \& \hyperlink{class_s_fparse_a5f7e978d765c8fb8735526fac38a301f}{operator=} (const \hyperlink{class_s_fparse}{S\+Fparse} \&in\+Obj)
+\begin{DoxyCompactList}\small\item\em Copy assignement operator. \end{DoxyCompactList}\item 
+\hyperlink{class_s_fparse_a9c3e1e6f6f687ecf61f046e1bcf5b61c}{S\+Fparse} (\hyperlink{class_s_fparse}{S\+Fparse} \&\&in\+Obj)
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_s_fparse}{S\+Fparse} \& \hyperlink{class_s_fparse_afde939079361531d7373ee8c0dc75151}{operator=} (\hyperlink{class_s_fparse}{S\+Fparse} \&\&in\+Obj)
+\begin{DoxyCompactList}\small\item\em Move assignement operator. \end{DoxyCompactList}\item 
+void \hyperlink{class_s_fparse_aafdccb9f01902b2081e6891ccfc8bd49}{change\+Out\+Type} (const string \&new\+Type)
+\begin{DoxyCompactList}\small\item\em Modify output type. \end{DoxyCompactList}\item 
+void \hyperlink{class_s_fparse_a2efd2115f5a579a4fccd25f9c4270c69}{operator()} ()
+\begin{DoxyCompactList}\small\item\em Input file parsing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sequence file parsing class. 
+
+Takes a list of files in one format and outputs one or more files in a different format, depending on settings. The data are presumed to come from a single chromosome.
+
+\begin{DoxyNote}{Note}
+Formats will be added as the need arises. 
+\end{DoxyNote}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_s_fparse_a63162a0c3d8c855602796198854eb36f}\label{class_s_fparse_a63162a0c3d8c855602796198854eb36f}} 
+\index{S\+Fparse@{S\+Fparse}!S\+Fparse@{S\+Fparse}}
+\index{S\+Fparse@{S\+Fparse}!S\+Fparse@{S\+Fparse}}
+\subsubsection{\texorpdfstring{S\+Fparse()}{SFparse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily S\+Fparse\+::\+S\+Fparse (\begin{DoxyParamCaption}\item[{const vector$<$ string $>$ \&}]{in\+Fl\+Nam,  }\item[{const vector$<$ string $>$ \&}]{line\+Names,  }\item[{const string \&}]{ref\+Fl\+Nam,  }\item[{const string \&}]{out\+Fl\+Nam,  }\item[{const string \&}]{chr\+Nam,  }\item[{const unsigned short \&}]{chr\+Num,  }\item[{const string \&}]{in\+Fl\+Type,  }\item[{const string \&}]{out\+Fl\+Type,  }\item[{const unsigned long \&}]{alloc = {\ttfamily 2000000000UL} }\end{DoxyParamCaption})}
+
+
+
+Constructor with vectors of names. 
+
+Takes vectors of input and output file names. Note that the number of lines cannot be bigger than maximum of {\itshape unsigned int}. This is not checked. Also, the {\itshape line\+Names} vector must have one fewer elements than the {\itshape in\+Fl\+Nam} vector.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em in\+Fl\+Nam} & vector of input file names \\
+\hline
+\mbox{\tt in}  & {\em line\+Names} & vector of line names \\
+\hline
+\mbox{\tt in}  & {\em ref\+Fl\+Nam} & reference file name \\
+\hline
+\mbox{\tt in}  & {\em out\+Fl\+Nam} & output file name \\
+\hline
+\mbox{\tt in}  & {\em chr\+Nam} & chromosome name \\
+\hline
+\mbox{\tt in}  & {\em chr\+Num} & chromosome number \\
+\hline
+\mbox{\tt in}  & {\em in\+Fl\+Type} & input file type \\
+\hline
+\mbox{\tt in}  & {\em out\+Fl\+Type} & outout file type \\
+\hline
+\mbox{\tt in}  & {\em alloc} & buffer allocation in bytes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_fparse_aa66f34c1f0db7451a191461f3f303137}\label{class_s_fparse_aa66f34c1f0db7451a191461f3f303137}} 
+\index{S\+Fparse@{S\+Fparse}!S\+Fparse@{S\+Fparse}}
+\index{S\+Fparse@{S\+Fparse}!S\+Fparse@{S\+Fparse}}
+\subsubsection{\texorpdfstring{S\+Fparse()}{SFparse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily S\+Fparse\+::\+S\+Fparse (\begin{DoxyParamCaption}\item[{const string \&}]{file\+List,  }\item[{const string \&}]{out\+Fl\+Nam,  }\item[{const string \&}]{chr\+Nam,  }\item[{const unsigned short \&}]{chr\+Num,  }\item[{const string \&}]{in\+Fl\+Type,  }\item[{const string \&}]{out\+Fl\+Type,  }\item[{const unsigned long \&}]{alloc = {\ttfamily 2000000000UL} }\end{DoxyParamCaption})}
+
+
+
+Constructor with file list and explicit types. 
+
+Takes a name of a file with the list of input files. The files should be listed one per line. Types to convert from and to are specified. The reference should be marked {\itshape r\+:} in the list of files. Number of lines is checked and warning issued if it is larger than the {\itshape unsigned int} maximum. Line names are derived from the non-\/reference files which should have the names before the underscore or extension (i.\+e., line\+Name\+\_\+\+X\+X\+X.\+ext or line\+Name.\+ext). Directory names will be stripped out.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em file\+List} & name of the control file \\
+\hline
+\mbox{\tt in}  & {\em out\+Fl\+Nam} & output file name \\
+\hline
+\mbox{\tt in}  & {\em chr\+Nam} & chromosome name \\
+\hline
+\mbox{\tt in}  & {\em chr\+Num} & chromosome number \\
+\hline
+\mbox{\tt in}  & {\em in\+Fl\+Type} & input file type \\
+\hline
+\mbox{\tt in}  & {\em out\+Fl\+Type} & outout file type \\
+\hline
+\mbox{\tt in}  & {\em alloc} & buffer allocation in bytes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_fparse_a7adee31d2eaa489b64e25f690348ce99}\label{class_s_fparse_a7adee31d2eaa489b64e25f690348ce99}} 
+\index{S\+Fparse@{S\+Fparse}!S\+Fparse@{S\+Fparse}}
+\index{S\+Fparse@{S\+Fparse}!S\+Fparse@{S\+Fparse}}
+\subsubsection{\texorpdfstring{S\+Fparse()}{SFparse()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily S\+Fparse\+::\+S\+Fparse (\begin{DoxyParamCaption}\item[{const string \&}]{file\+List,  }\item[{const string \&}]{out\+Fl\+Nam,  }\item[{const unsigned long \&}]{alloc = {\ttfamily 2000000000UL} }\end{DoxyParamCaption})}
+
+
+
+Constructor with file list. 
+
+Takes a name of a file with the list of input files. The files should be listed one per line. Types are identified from file extensions. Only the first file listed for input is used (and checked) to determine the input type. The reference should be marked {\itshape r\+:} in the list of files. Chromosome name is derived from the output file name which should immediately precede the extension and may be preceded by an underscore (i.\+e., X\+X\+X\+\_\+chr\+Name.\+ext). Number of lines is checked and warning issued if it is larger than the {\itshape unsigned int} maximum. Line names are derived from the non-\/reference files which should have the names before the underscore or extension (i.\+e., line\+Name\+\_\+\+X\+X\+X.\+ext or line\+Name.\+ext). Directory names will be stripped out.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em file\+List} & name of the control file \\
+\hline
+\mbox{\tt in}  & {\em out\+Fl\+Nam} & output file name \\
+\hline
+\mbox{\tt in}  & {\em alloc} & buffer allocation in bytes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_fparse_ae85a63a8883ec1c318cabdcb30398063}\label{class_s_fparse_ae85a63a8883ec1c318cabdcb30398063}} 
+\index{S\+Fparse@{S\+Fparse}!S\+Fparse@{S\+Fparse}}
+\index{S\+Fparse@{S\+Fparse}!S\+Fparse@{S\+Fparse}}
+\subsubsection{\texorpdfstring{S\+Fparse()}{SFparse()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily S\+Fparse\+::\+S\+Fparse (\begin{DoxyParamCaption}\item[{const \hyperlink{class_s_fparse}{S\+Fparse} \&}]{in\+Obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em in\+Obj} & object to be copied \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_fparse_a9c3e1e6f6f687ecf61f046e1bcf5b61c}\label{class_s_fparse_a9c3e1e6f6f687ecf61f046e1bcf5b61c}} 
+\index{S\+Fparse@{S\+Fparse}!S\+Fparse@{S\+Fparse}}
+\index{S\+Fparse@{S\+Fparse}!S\+Fparse@{S\+Fparse}}
+\subsubsection{\texorpdfstring{S\+Fparse()}{SFparse()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily S\+Fparse\+::\+S\+Fparse (\begin{DoxyParamCaption}\item[{\hyperlink{class_s_fparse}{S\+Fparse} \&\&}]{in\+Obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em in\+Obj} & object to be moved \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_s_fparse_aafdccb9f01902b2081e6891ccfc8bd49}\label{class_s_fparse_aafdccb9f01902b2081e6891ccfc8bd49}} 
+\index{S\+Fparse@{S\+Fparse}!change\+Out\+Type@{change\+Out\+Type}}
+\index{change\+Out\+Type@{change\+Out\+Type}!S\+Fparse@{S\+Fparse}}
+\subsubsection{\texorpdfstring{change\+Out\+Type()}{changeOutType()}}
+{\footnotesize\ttfamily void S\+Fparse\+::change\+Out\+Type (\begin{DoxyParamCaption}\item[{const string \&}]{new\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Modify output type. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+Type} & new output format \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_fparse_a2efd2115f5a579a4fccd25f9c4270c69}\label{class_s_fparse_a2efd2115f5a579a4fccd25f9c4270c69}} 
+\index{S\+Fparse@{S\+Fparse}!operator()@{operator()}}
+\index{operator()@{operator()}!S\+Fparse@{S\+Fparse}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void S\+Fparse\+::operator() (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Input file parsing. 
+
+Function operator performs parsing of input files. Saves the results to the output file(s). \mbox{\Hypertarget{class_s_fparse_a5f7e978d765c8fb8735526fac38a301f}\label{class_s_fparse_a5f7e978d765c8fb8735526fac38a301f}} 
+\index{S\+Fparse@{S\+Fparse}!operator=@{operator=}}
+\index{operator=@{operator=}!S\+Fparse@{S\+Fparse}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_s_fparse}{S\+Fparse} \& S\+Fparse\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_s_fparse}{S\+Fparse} \&}]{in\+Obj }\end{DoxyParamCaption})}
+
+
+
+Copy assignement operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em in\+Obj} & object to be copied\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_s_fparse}{S\+Fparse} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_fparse_afde939079361531d7373ee8c0dc75151}\label{class_s_fparse_afde939079361531d7373ee8c0dc75151}} 
+\index{S\+Fparse@{S\+Fparse}!operator=@{operator=}}
+\index{operator=@{operator=}!S\+Fparse@{S\+Fparse}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_s_fparse}{S\+Fparse} \& S\+Fparse\+::operator= (\begin{DoxyParamCaption}\item[{\hyperlink{class_s_fparse}{S\+Fparse} \&\&}]{in\+Obj }\end{DoxyParamCaption})}
+
+
+
+Move assignement operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em in\+Obj} & object to be moved\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_s_fparse}{S\+Fparse} object 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{sequence_8hpp}{sequence.\+hpp}\item 
+\hyperlink{sequence_8cpp}{sequence.\+cpp}\end{DoxyCompactItemize}
