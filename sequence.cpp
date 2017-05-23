@@ -486,7 +486,8 @@ void SFparse::operator()(){
 					} else if ( (alt != anc) && (refBuf[i] != anc) ) { // the SNP is biallelic in the sample, but the ancestral state is different from both
 						outBim << _chromNum << " s" << chrPos << "d_" << _chromName << " -9 " << chrPos << " " << alt << " " << refBuf[i] << endl;
 					} else {
-						outBim << _chromNum << " s" << chrPos << "_" << _chromName << " -9 " << chrPos << " " << alt << " " << refBuf[i] << endl;
+						alt = (alt == anc ? refBuf[i] : alt); // assign ref to alt if alt is ancestral
+						outBim << _chromNum << " s" << chrPos << "_" << _chromName << " -9 " << chrPos << " " << alt << " " << anc << endl;
 					}
 					
 					unsigned int remainPad = bedLineLen * 4; // tracks how many genotypes are left in the padded line
