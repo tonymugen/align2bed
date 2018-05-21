@@ -12,8 +12,8 @@ Neither _align2bed_ itself nor the class used to implement it has any dependenci
 
 To compile, make sure you are in the directory with the source code files and run
 
-	g++ align2bed.cpp sequence.cpp -o align2bed -O3 -march=native -std=c++11
+	g++ align2bed.cpp sequence.cpp -o align2bed -lpthread -O3 -march=native -std=c++11
 
-then copy the binary where you need it. Run by typing `./align2bed` in the directory with the binary and the data, or move into an appropriate /bin folder for global access.
+then copy the binary where you need it. On FreeBSD, replace `g++` with `c++`. Run by typing `./align2bed` in the directory with the binary and the data, or move into an appropriate /bin folder for global access.
 
 The example data set includes control files for each autosome and 20 kb of alignments extracted from 284 _Drosophila_ lines (283 _D. melanogaster_ and a _D. simulans_ outgroup). Each chromosome needs a separate control file, which simply lists the paths to FASTA files (which can include directories), one file per line. The file containing the outgroup sequence should be marked with "r:".
